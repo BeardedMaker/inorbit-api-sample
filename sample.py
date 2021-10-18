@@ -111,7 +111,6 @@ def moverobot(robotId, movetox, movetoy, movetotheta):
     payload = json.dumps({
       "waypoints": [
         {
-          "frameId": "string",
           "x": movetox,
           "y": movetoy,
           "theta": movetotheta
@@ -206,4 +205,5 @@ for ids in robotID:
         actionid = get_actions(ids)
         execid = perform_action(ids,actionid)
         while get_actionstatus(ids, execid) == 'started':
+            pass
             #Till an action is running
